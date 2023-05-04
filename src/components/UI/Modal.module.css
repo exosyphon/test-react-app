@@ -1,0 +1,175 @@
+.dice-container {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.dice {
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+}
+
+.dice .side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dice .front {
+    transform: translateZ(60px);
+}
+
+.dice .back {
+    transform: rotateX(180deg) translateZ(60px);
+}
+
+.dice .right {
+    transform: rotateY(90deg) translateZ(60px);
+}
+
+.dice .left {
+    transform: rotateY(-90deg) translateZ(60px);
+}
+
+.dice .top {
+    transform: rotateX(90deg) translateZ(60px);
+}
+
+.dice .bottom {
+    transform: rotateX(-90deg) translateZ(60px);
+}
+
+.dice .rolling {
+    animation: roll 1s infinite linear;
+}
+
+@keyframes roll {
+    from {
+        transform: rotateX(0) rotateY(0);
+    }
+    to {
+        transform: rotate
+        X(360deg) rotateY(360deg);
+    }
+}
+
+.dice .dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.dice .front .dot {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dice .back .dot:nth-child(1) {
+    top: 25%;
+    left: 25%;
+}
+
+.dice .back .dot:nth-child(2) {
+    top: 75%;
+    left: 75%;
+}
+
+.dice .right .dot:nth-child(1) {
+    top: 25%;
+    left: 25%;
+}
+
+.dice .right .dot:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dice .right .dot:nth-child(3) {
+    top: 75%;
+    left: 75%;
+}
+
+.dice .left .dot:nth-child(1) {
+    top: 25%;
+    left: 75%;
+}
+
+.dice .left .dot:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dice .left .dot:nth-child(3) {
+    top: 75%;
+    left: 25%;
+}
+
+.dice .top .dot:nth-child(1) {
+    top: 25%;
+    left: 25%;
+}
+
+.dice .top .dot:nth-child(2) {
+    top: 25%;
+    left: 75%;
+}
+
+.dice .top .dot:nth-child(3) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dice .top .dot:nth-child(4) {
+    top: 75%;
+    left: 25%;
+}
+
+.dice .top .dot:nth-child(5) {
+    top: 75%;
+    left: 75%;
+}
+
+.dice .bottom .dot:nth-child(1) {
+    top: 25%;
+    left: 25%;
+}
+
+.dice .bottom .dot:nth-child(2) {
+    top: 25%;
+    left: 75%;
+}
+
+.dice .bottom .dot:nth-child(3) {
+    top: 50%;
+    left: 25%;
+}
+
+.dice .bottom .dot:nth-child(4) {
+    top: 50%;
+    left: 75%;
+}
+
+.dice .bottom .dot:nth-child(5) {
+    top: 75%;
+    left: 25%;
+}
+
+.dice .bottom .dot:nth-child(6) {
+    top: 75%;
+    left: 75%;
+}
