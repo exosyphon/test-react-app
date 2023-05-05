@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-//import "./Modal.module.css"
 
 const Modal = () => {
   const [roll, setRoll] = useState(1)
